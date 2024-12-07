@@ -15,6 +15,7 @@ export function deleteModule(moduleId) {
 
  export function updateModule(moduleId, moduleUpdates) {
   const { modules } = Database;
+  console.log(moduleId)
   const module = modules.find((module) => module._id === moduleId);
   Object.assign(module, moduleUpdates);
   return module;
